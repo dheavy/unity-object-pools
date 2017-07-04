@@ -9,4 +9,11 @@ public class Stuff : MonoBehaviour
     {
         Body = GetComponent<Rigidbody>();
     }
+
+    void OnTriggerEnter (Collider enteredCollider) 
+    {
+        if (enteredCollider.CompareTag("Kill Zone")) {
+            Destroy(gameObject);
+        }
+    }
 }
