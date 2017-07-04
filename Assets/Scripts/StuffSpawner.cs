@@ -31,6 +31,6 @@ public class StuffSpawner : MonoBehaviour
 
         spawn.Body.velocity = transform.up * velocity + Random.onUnitSphere * randomVelocity.RandomInRange;
         spawn.Body.angularVelocity = Random.onUnitSphere * angularVelocity.RandomInRange;
-        spawn.GetComponent<MeshRenderer>().material = stuffMaterial;
+        spawn.SetMaterial(stuffMaterial);
     }
 }
